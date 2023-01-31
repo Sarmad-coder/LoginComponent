@@ -122,7 +122,7 @@ app.put("/User-Conformation", async (req,res)=>{
 })
 
 
-app.use(myExpress.static("./build"))
+app.use(myExpress.static("./Clients/build"))
 app.listen(8090, () => {
   console.log("server is runing");
 })
