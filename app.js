@@ -122,15 +122,7 @@ app.put("/User-Conformation", async (req,res)=>{
 })
 
 
-app.use(myExpress.static(path.join(__dirname, "./Clients/build")));
-app.get("*", function (_, res) {
-  res.sendFile(
-    path.join(__dirname, "./Clients/build/index.html"),
-    function (err) {
-      res.status(500).send(err);
-    }
-  );
-});
+app.use(myExpress.static("./Clients/build"))
 app.listen(8090, () => {
   console.log("server is runing");
 })
